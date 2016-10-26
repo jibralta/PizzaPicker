@@ -12,6 +12,7 @@
 		6713BC361DC14EC900BFFD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6713BC341DC14EC900BFFD2E /* Main.storyboard */; };
 		6713BC381DC14EC900BFFD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6713BC371DC14EC900BFFD2E /* Assets.xcassets */; };
 		6713BC3B1DC14EC900BFFD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6713BC391DC14EC900BFFD2E /* LaunchScreen.storyboard */; };
+		6713BC431DC15A3B00BFFD2E /* VarsityPlaybook-DEMO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6713BC421DC15A3B00BFFD2E /* VarsityPlaybook-DEMO.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6713BC371DC14EC900BFFD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6713BC3A1DC14EC900BFFD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6713BC3C1DC14EC900BFFD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6713BC421DC15A3B00BFFD2E /* VarsityPlaybook-DEMO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarsityPlaybook-DEMO.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				6713BC321DC14EC900BFFD2E /* ViewController.swift */,
 				6713BC341DC14EC900BFFD2E /* Main.storyboard */,
 				6713BC371DC14EC900BFFD2E /* Assets.xcassets */,
+				6713BC421DC15A3B00BFFD2E /* VarsityPlaybook-DEMO.ttf */,
 				6713BC391DC14EC900BFFD2E /* LaunchScreen.storyboard */,
 				6713BC3C1DC14EC900BFFD2E /* Info.plist */,
 			);
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6713BC3B1DC14EC900BFFD2E /* LaunchScreen.storyboard in Resources */,
+				6713BC431DC15A3B00BFFD2E /* VarsityPlaybook-DEMO.ttf in Resources */,
 				6713BC381DC14EC900BFFD2E /* Assets.xcassets in Resources */,
 				6713BC361DC14EC900BFFD2E /* Main.storyboard in Resources */,
 			);
