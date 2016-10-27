@@ -15,8 +15,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var chosenPizza: UIImageView!
     
     var btnSound: AVAudioPlayer!
-    var images = [UIImageView]()
-
+    var pizzaImages = ["pizza1", "pizza2", "pizza3", "pizza4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,23 +30,16 @@ class MainVC: UIViewController {
         
 //        btnSound.play()
         
-//        chosenPizza.image = 
+        chosenPizza.isHidden = false
         
-        for x in 0...3 {
-            let image = UIImage(named: "pizza\(x)")
-            let imageView = UIImageView(image:image)
-            images.append(imageView)
-            
-        }
+        let randomNumber = Int(arc4random_uniform(4))
         
-//        chosenPizza.image = 
+        print("pizza\(randomNumber)")
         
-        let image = UIImage(named: "pizza4")
-        chosenPizza.image = image
-        
+        chosenPizza.image = UIImage(named: "pizza\(randomNumber)")!
+    
+    
     }
-    
-    
 
 
 

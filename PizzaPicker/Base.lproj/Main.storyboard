@@ -25,7 +25,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-BQ-kWL"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodtop" translatesAutoresizingMaskIntoConstraints="NO" id="nGU-6i-Obd"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PizzaSketch" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-NR-qmD">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PizzaSketch" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-NR-qmD">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="JOG-B5-SlN"/>
                                     <constraint firstAttribute="width" constant="250" id="cYG-kL-73I"/>
