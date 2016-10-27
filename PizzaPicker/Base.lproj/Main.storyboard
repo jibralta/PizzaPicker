@@ -23,9 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-BQ-kWL"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-BQ-kWL"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodtop" translatesAutoresizingMaskIntoConstraints="NO" id="nGU-6i-Obd"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza1" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-NR-qmD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PizzaSketch" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-NR-qmD">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="JOG-B5-SlN"/>
                                     <constraint firstAttribute="width" constant="250" id="cYG-kL-73I"/>
@@ -89,9 +89,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PizzaSketch" width="835" height="916"/>
         <image name="Pizzaboard_Iborra" width="630" height="509"/>
         <image name="chalkboard" width="1300" height="1300"/>
-        <image name="pizza1" width="331" height="265"/>
         <image name="woodtop" width="450" height="310"/>
     </resources>
 </document>
