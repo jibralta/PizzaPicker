@@ -9,12 +9,15 @@
 import UIKit
 import AVFoundation
 
+// Test comment: new mbp
+
 class MainVC: UIViewController {
 
     
     @IBOutlet weak var chosenPizza: UIImageView!
     
-    var btnSound: AVAudioPlayer!
+    var audioPlayer = AVAudioPlayer()
+    
     var pizzaImages = ["pizza1", "pizza2", "pizza3", "pizza4"]
     
     override func viewDidLoad() {
@@ -23,12 +26,22 @@ class MainVC: UIViewController {
         chosenPizza.layer.cornerRadius = 18
         chosenPizza.clipsToBounds = true
         
-        _ = Bundle.main.path(forResource: "boy", ofType: "mp3")
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
         
-//        btnSound.play()
+        // Set the sound file name & extension
+        var btnSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "boy", ofType: "mp3")!)
+        
+        // Preparation
+        AVAudioSession.sharedInstance.setCategory(AVAudioSessionCategoryPlayback, error:nil)
+        AVAudioSession.sharedInstance.setActive(true, error: nil)
+        
+        // Play the sound
+        var error: NSError?
+        audioPlayer = AVAudioPlayer(contentsOf: (btnSound as NSURL) as URL)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
         
         chosenPizza.isHidden = false
         
