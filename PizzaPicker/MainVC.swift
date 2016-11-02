@@ -9,8 +9,6 @@
 import UIKit
 import AVFoundation
 
-// Test comment: new mbp
-
 class MainVC: UIViewController {
 
     
