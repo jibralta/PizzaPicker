@@ -16,7 +16,9 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var chosenPizza: UIImageView!
     
-    var audioPlayer = AVAudioPlayer()
+//    var audioPlayer = AVAudioPlayer()
+    
+    var boySound: AVAudioPlayer!
     
     var pizzaImages = ["pizza1", "pizza2", "pizza3", "pizza4"]
     
@@ -30,18 +32,31 @@ class MainVC: UIViewController {
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
         
-        // Set the sound file name & extension
-        var btnSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "boy", ofType: "mp3")!)
+//        // Set the sound file name & extension
+//        var btnSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "boy", ofType: "mp3")!)
+//        
+//        // Preparation
+//        AVAudioSession.sharedInstance.setCategory(AVAudioSessionCategoryPlayback, error:nil)
+//        AVAudioSession.sharedInstance.setActive(true, error: nil)
+//        
+//        // Play the sound
+//        var error: NSError?
+//        audioPlayer = AVAudioPlayer(contentsOf: (btnSound as NSURL) as URL)
+//        audioPlayer.prepareToPlay()
+//        audioPlayer.play()
         
-        // Preparation
-        AVAudioSession.sharedInstance.setCategory(AVAudioSessionCategoryPlayback, error:nil)
-        AVAudioSession.sharedInstance.setActive(true, error: nil)
         
-        // Play the sound
-        var error: NSError?
-        audioPlayer = AVAudioPlayer(contentsOf: (btnSound as NSURL) as URL)
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
+        
+        let path = Bundle.main.path(forResource: "boy.mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url)
+            boySound = sound
+            sound.play()
+        } catch {
+            //coudn't load file
+        }
         
         chosenPizza.isHidden = false
         
