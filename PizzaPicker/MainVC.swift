@@ -14,11 +14,7 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var chosenPizza: UIImageView!
     
-//    var audioPlayer = AVAudioPlayer()
-    
     var boySound: AVAudioPlayer!
-    
-    var pizzaImages = ["pizza1", "pizza2", "pizza3", "pizza4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,23 +24,23 @@ class MainVC: UIViewController {
         
     }
     
-    @IBAction func buttonPressed(_ sender: AnyObject) {
+    var previousNumber: UInt32?
+    var randomNumber: UInt32?
+
+    
+    func nonConsecutiveRandom() -> UInt32 {
         
-//        // Set the sound file name & extension
-//        var btnSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "boy", ofType: "mp3")!)
-//        
-//        // Preparation
-//        AVAudioSession.sharedInstance.setCategory(AVAudioSessionCategoryPlayback, error:nil)
-//        AVAudioSession.sharedInstance.setActive(true, error: nil)
-//        
-//        // Play the sound
-//        var error: NSError?
-//        audioPlayer = AVAudioPlayer(contentsOf: (btnSound as NSURL) as URL)
-//        audioPlayer.prepareToPlay()
-//        audioPlayer.play()
+        randomNumber = arc4random_uniform(4)
         
+        while randomNumber == previousNumber {
+            randomNumber = arc4random_uniform(4)
+        }
         
-        
+        return randomNumber!
+    }
+
+
+    @IBAction func buttonPressed(_ sender: Any) {
         let path = Bundle.main.path(forResource: "boy.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         
@@ -54,20 +50,19 @@ class MainVC: UIViewController {
             sound.play()
         } catch {
             //coudn't load file
+            print("no audio file found")
         }
         
         chosenPizza.isHidden = false
         
-        let randomNumber = Int(arc4random_uniform(4))
-        
-        print("pizza\(randomNumber)")
-        
-        chosenPizza.image = UIImage(named: "pizza\(randomNumber)")!
-    
+        previousNumber = randomNumber
+        chosenPizza.image = UIImage(named: "pizza\(nonConsecutiveRandom())")!
+
+        print(nonConsecutiveRandom())
     
     }
-
-
-
+    
 }
+
+
 
